@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-link {
+  @apply hover:text-primary-light hover:font-bold hover:underline hover:underline-offset-8 transition duration-500;
+}
+
+.icon-animation {
+  @apply transition-transform duration-300 ease-in-out hover:text-white hover:scale-125 hover:-translate-y-1 hover:bg-primary-light hover:shadow-lg;
+}
+
+.hover-shadow-custom-yellow-big {
+  @apply hover:shadow-custom-yellow-big;
+}
+
+.hover-shadow-custom-yellow-small {
+  @apply hover:shadow-custom-yellow-small transition ease-in-out duration-300 cursor-pointer;
+}
+
+.text-shadow-custom-yellow {
+  text-shadow: 0 0 25px rgba(255, 255, 0, 0.7);
+}
+
+* {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f3f81b; /* 使用 Tailwind 的黃色 */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000; /* 使用 Tailwind 的 bg-stone-800 */
+}

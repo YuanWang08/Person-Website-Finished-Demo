@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="min-h-screen">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>個人履歷範例</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body class="w-full h-full bg-background-dark text-white px-4 md:px-36 pt-4">
+    <header class="flex justify-between items-center">
+      <a
+        href=""
+        class="text-xl md:text-3xl cursor-pointer transition ease duration-300 hover:scale-110"
+        >Jack Hung |
+        <span class="text-primary-light text-shadow-custom-yellow"
+          >Web Developer</span
+        ></a
+      >
+
+      <!-- 手機選單按鈕 -->
+      <i
+        class="bx bx-menu md:hidden block text-3xl cursor-pointer"
+        id="menu-icon"
+      ></i>
+
+      <!-- 手機下拉選單 -->
+      <!-- 有空再寫 -->
+
+      <nav class="space-x-4 md:block hidden">
+        <a href="#home" class="nav-link">主頁</a>
+        <a href="#experience" class="nav-link">經歷</a>
+        <a href="#skills" class="nav-link">技能</a>
+        <a href="#portfolio" class="nav-link">作品集</a>
+        <a href="#contact" class="nav-link">聯絡我</a>
+      </nav>
+    </header>
+
+    <!-- 主頁 -->
+    <section id="home" class="flex flex-col-reverse md:flex-row pt-4">
+      <div class="w-full pt-4 md:w-[60%]">
+        <div>
+          <p class="text-6xl">
+            Hi, It's
+            <span class="text-primary-light text-shadow-custom-yellow"
+              >Jack Hung</span
+            >
+          </p>
+          <p class="text-4xl pt-3">
+            I'm a
+            <span class="text-primary-light text-shadow-custom-yellow"
+              >Web Developer</span
+            >
+          </p>
+          <p class="text-2xl pt-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet vel
+            optio obcaecati quod, nihil quam repellat impedit, eaque quibusdam
+            ut provident voluptatum nesciunt, alias reprehenderit voluptas
+            magni. Animi, dicta ad.
+          </p>
+        </div>
+
+        <!-- icons -->
+        <div class="flex items-center space-x-4 pt-4">
+          <a
+            href="#"
+            class="icon-animation w-18 h-18 bg-transparent text-primary-light text-3xl border-2 border-primary-light rounded-full"
+            ><i class="bx bxl-facebook-square p-1.5"></i
+          ></a>
+          <a
+            href="#"
+            class="icon-animation w-18 h-18 bg-transparent text-primary-light text-3xl border-2 border-primary-light rounded-full"
+            ><i class="bx bxl-instagram-alt p-1.5"></i
+          ></a>
+          <a
+            href="#"
+            class="icon-animation w-18 h-18 bg-transparent text-primary-light text-3xl border-2 border-primary-light rounded-full"
+            ><i class="bx bxl-github p-1.5"></i
+          ></a>
+          <a
+            href="#"
+            class="icon-animation w-18 h-18 bg-transparent text-primary-light text-3xl border-2 border-primary-light rounded-full"
+            ><i class="bx bxl-twitter p-1.5"></i
+          ></a>
+        </div>
+
+        <!-- 下載履歷按鈕 -->
+        <div class="flex items-center space-x-3 pt-4">
+          <a
+            href="#"
+            class="bg-primary-light text-black rounded-full w-auto h-auto p-3 flex items-center justify-center text-xs font-semibold transition-transform transform hover:scale-105"
+            >Download CV</a
+          >
+        </div>
+      </div>
+
+      <!-- 大頭貼 -->
+      <div class="w-full md:w-[40%] flex justify-center items-center">
+        <img
+          src="https://picsum.photos/200/200"
+          alt=""
+          class="rounded-full relative w-[400px] cursor-pointer duration-400 ease-in-out hover:scale-105 transition duration-300 hover-shadow-custom-yellow-big"
+        />
+      </div>
+    </section>
+
+    <!-- 經歷 -->
+    <!-- 未來用js渲染 -->
+    <section id="experience" class="pt-8">
+      <h2 class="text-4xl">經歷</h2>
+
+      <div class="pl-4 pt-4 flex flex-col">
+        <!-- Item 1 -->
+        <div class="relative flex space-x-4">
+          <div class="">
+            <div class="h-full w-1 bg-primary-light"></div>
+            <div
+              class="absolute bg-primary-light w-4 h-4 top-0 left-0 rounded-full transform -translate-x-1.5 translate-y-1"
+            ></div>
+          </div>
+          <div class="pb-4">
+            <p class="pb-3 pl-1">2021</p>
+            <div class="border border-primary-light rounded-xl p-3">
+              <p>High School</p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
+                quae laborum provident, recusandae magnam alias at architecto
+                officiis sapiente tempore excepturi fugiat repellendus dolore
+                inventore vero. Iure, quia! Asperiores, autem.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="relative flex space-x-4">
+          <div class="">
+            <div class="h-full w-1 bg-primary-light"></div>
+            <div
+              class="absolute bg-primary-light w-4 h-4 top-0 left-0 rounded-full transform -translate-x-1.5 translate-y-1"
+            ></div>
+          </div>
+          <div class="pb-4">
+            <p class="pb-3 pl-1">2022</p>
+            <div class="border border-primary-light rounded-xl p-3">
+              <p>University</p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
+                quae laborum provident, recusandae magnam alias at architecto
+                officiis sapiente tempore excepturi fugiat repellendus dolore
+                inventore vero. Iure, quia! Asperiores, autem.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技能 -->
+    <!-- 未來用js渲染 -->
+    <section id="skills" class="pt-8">
+      <h2 class="text-4xl">技能</h2>
+      <div class="flex flex-wrap justify-center items-center gap-4 pt-4">
+        <div class="w-[180px] flex flex-col justify-center items-center">
+          <img
+            src="https://picsum.photos/200/200"
+            alt=""
+            class="rounded-full w-full h-auto hover-shadow-custom-yellow-small"
+          />
+          <p class="mt-2">HTML</p>
+        </div>
+        <div class="w-[180px] flex flex-col justify-center items-center">
+          <img
+            src="https://picsum.photos/200/200"
+            alt=""
+            class="rounded-full w-full h-auto hover-shadow-custom-yellow-small"
+          />
+          <p class="mt-2">Javascript</p>
+        </div>
+        <div class="w-[180px] flex flex-col justify-center items-center">
+          <img
+            src="https://picsum.photos/200/200"
+            alt=""
+            class="rounded-full w-full h-auto hover-shadow-custom-yellow-small"
+          />
+          <p class="mt-2">CSS</p>
+        </div>
+        <div class="w-[180px] flex flex-col justify-center items-center">
+          <img
+            src="https://picsum.photos/200/200"
+            alt=""
+            class="rounded-full w-full h-auto hover-shadow-custom-yellow-small"
+          />
+          <p class="mt-2">TailwindCSS</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 作品集 -->
+    <!-- 未來用js渲染 -->
+    <section id="portfolio" class="pt-8">
+      <h2 class="text-4xl">作品集</h2>
+      <div
+        class="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-4 pt-4"
+      >
+        <!-- Item 1 -->
+        <div
+          class="w-full h-[30vh] md:w-[45%] border-2 border-primary-light flex p-4 rounded-3xl hover-shadow-custom-yellow-small"
+        >
+          <div class="flex flex-col justify-center items-center w-[40%]">
+            <img
+              src="https://picsum.photos/200/200"
+              alt=""
+              class="rounded-full w-32 h-32 object-cover"
+            />
+            <p class="mt-2 text-white">Project 1</p>
+          </div>
+          <div class="pl-4 w-[60%] flex items-center">
+            <p class="text-white">
+              用Html標籤製作的網頁，這是一個簡單的網頁，用來展示Html的基本標籤
+            </p>
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div
+          class="w-full h-[30vh] md:w-[45%] border-2 border-primary-light flex p-4 rounded-3xl hover-shadow-custom-yellow-small"
+        >
+          <div class="flex flex-col justify-center items-center w-[40%]">
+            <img
+              src="https://picsum.photos/200/200"
+              alt=""
+              class="rounded-full w-32 h-32 object-cover"
+            />
+            <p class="mt-2 text-white">Project 2</p>
+          </div>
+          <div class="pl-4 w-[60%] flex items-center">
+            <p class="text-white">
+              用Html標籤製作的網頁，這是一個簡單的網頁，用來展示Html的基本標籤
+            </p>
+          </div>
+          <!-- Item 3 -->
+        </div>
+        <!-- Item 3 -->
+        <div
+          class="w-full h-[30vh] md:w-[45%] border-2 border-primary-light flex p-4 rounded-3xl hover-shadow-custom-yellow-small"
+        >
+          <div class="flex flex-col justify-center items-center w-[40%]">
+            <img
+              src="https://picsum.photos/200/200"
+              alt=""
+              class="rounded-full w-32 h-32 object-cover"
+            />
+            <p class="mt-2 text-white">Project 3</p>
+          </div>
+          <div class="pl-4 w-[60%] flex items-center">
+            <p class="text-white">
+              用Html標籤製作的網頁，這是一個簡單的網頁，用來展示Html的基本標籤
+            </p>
+          </div>
+        </div>
+        <!-- Item 4 -->
+        <div
+          class="w-full h-[30vh] md:w-[45%] border-2 border-primary-light flex p-4 rounded-3xl hover-shadow-custom-yellow-small"
+        >
+          <div class="flex flex-col justify-center items-center w-[40%]">
+            <img
+              src="https://picsum.photos/200/200"
+              alt=""
+              class="rounded-full w-32 h-32 object-cover"
+            />
+            <p class="mt-2 text-white">Project 3</p>
+          </div>
+          <div class="pl-4 w-[60%] flex items-center">
+            <p class="text-white">
+              用Html標籤製作的網頁，這是一個簡單的網頁，用來展示Html的基本標籤
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 聯絡我 -->
+    <section id="contact" class="pt-8">
+      <h2 class="text-4xl text-center mb-6">聯絡我</h2>
+      <form class="flex flex-col space-y-4 max-w-lg mx-auto">
+        <input
+          type="text"
+          placeholder="Name"
+          class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-light text-black"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-light text-black"
+        />
+        <textarea
+          placeholder="Message"
+          class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-light h-32 resize-none text-black"
+        ></textarea>
+        <a
+          href="#"
+          class="bg-primary-light text-black rounded-full w-full h-auto py-3 flex items-center justify-center text-sm font-semibold transition-transform transform hover:scale-105"
+          >Send</a
+        >
+      </form>
+    </section>
+
+    <footer class="flex flex-col justify-center items-center pt-12">
+      <div class="flex items-center space-x-4">
+        <a
+          href="#"
+          class="flex justify-center items-center w-9 h-9 bg-transparent border-2 border-primary-light text-primary-light text-xl rounded-full transition-transform duration-300 ease-in-out hover:text-white hover:scale-125 hover:-translate-y-1 hover:bg-yellow-300 hover:shadow-lg"
+          ><i class="bx bxl-facebook-square"></i
+        ></a>
+        <a
+          href="#"
+          class="flex justify-center items-center w-9 h-9 bg-transparent border-2 border-primary-light text-primary-light text-xl rounded-full transition-transform duration-300 ease-in-out hover:text-white hover:scale-125 hover:-translate-y-1 hover:bg-yellow-300 hover:shadow-lg"
+          ><i class="bx bxl-instagram-alt"></i
+        ></a>
+        <a
+          href="#"
+          class="flex justify-center items-center w-9 h-9 bg-transparent border-2 border-primary-light text-primary-light text-xl rounded-full transition-transform duration-300 ease-in-out hover:text-white hover:scale-125 hover:-translate-y-1 hover:bg-yellow-300 hover:shadow-lg"
+          ><i class="bx bxl-github"></i
+        ></a>
+        <a
+          href="#"
+          class="flex justify-center items-center w-9 h-9 bg-transparent border-2 border-primary-light text-primary-light text-xl rounded-full transition-transform duration-300 ease-in-out hover:text-white hover:scale-125 hover:-translate-y-1 hover:bg-yellow-300 hover:shadow-lg"
+          ><i class="bx bxl-twitter"></i
+        ></a>
+      </div>
+      <ul class="flex justify-center items-center space-x-6 pt-8">
+        <li>
+          <a
+            href="#home"
+            class="hover:text-primary-light hover:font-bold hover:underline hover:underline-offset-8 transition duration-500"
+            >主頁</a
+          >
+        </li>
+
+        <li>
+          <a
+            href="#experience"
+            class="hover:text-primary-light hover:font-bold hover:underline hover:underline-offset-8 transition duration-500"
+            >經歷</a
+          >
+        </li>
+
+        <li>
+          <a
+            href="#skills"
+            class="hover:text-primary-light hover:font-bold hover:underline hover:underline-offset-8 transition duration-500"
+            >技能</a
+          >
+        </li>
+
+        <li>
+          <a
+            href="#portfolio"
+            class="hover:text-primary-light hover:font-bold hover:underline hover:underline-offset-8 transition duration-500"
+            >作品集</a
+          >
+        </li>
+
+        <li>
+          <a
+            href="#contact"
+            class="hover:text-primary-light hover:font-bold hover:underline hover:underline-offset-8 transition duration-500"
+            >聯絡我</a
+          >
+        </li>
+      </ul>
+      <p class="text-sm pt-8 pb-4">© 2024 English Vegetable Cheater Pro</p>
+    </footer>
+  </body>
+</html>
