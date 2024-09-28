@@ -11,7 +11,9 @@
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body class="w-full h-full bg-background-dark text-white px-4 md:px-36 pt-4">
-    <header class="flex justify-between items-center">
+    <header
+      class="fixed top-0 left-0 px-4 md:px-36 pt-4 w-full flex justify-between items-center z-50 bg-background-dark"
+    >
       <a
         href=""
         class="text-xl md:text-3xl cursor-pointer transition ease duration-300 hover:scale-110"
@@ -27,9 +29,26 @@
         id="menu-icon"
       ></i>
 
-      <!-- 手機下拉選單 -->
-      <!-- 有空再寫 -->
+      <!-- 手機選單 -->
+      <div
+        class="fixed top-0 right-0 h-full w-[250px] bg-[#9a5ba4] transform translate-x-full transition-transform duration-300 ease-in-out"
+        id="mobile-menu"
+      >
+        <i
+          class="bx bx-x text-3xl cursor-pointer absolute top-4 right-4"
+          id="close-icon"
+        ></i>
 
+        <nav class="flex flex-col items-center space-y-4 pt-20">
+          <a href="#home" class="nav-link">主頁</a>
+          <a href="#experience" class="nav-link">經歷</a>
+          <a href="#skills" class="nav-link">技能</a>
+          <a href="#portfolio" class="nav-link">作品集</a>
+          <a href="#contact" class="nav-link">聯絡我</a>
+        </nav>
+      </div>
+
+      <!-- 電腦選單 -->
       <nav class="space-x-4 md:block hidden">
         <a href="#home" class="nav-link">主頁</a>
         <a href="#experience" class="nav-link">經歷</a>
@@ -40,7 +59,7 @@
     </header>
 
     <!-- 主頁 -->
-    <section id="home" class="flex flex-col-reverse md:flex-row pt-4">
+    <section id="home" class="flex flex-col-reverse md:flex-row pt-10">
       <div class="w-full pt-4 md:w-[60%]">
         <div>
           <p class="text-6xl">
@@ -51,9 +70,9 @@
           </p>
           <p class="text-4xl pt-3">
             I'm a
-            <span class="text-primary-light text-shadow-custom-yellow"
-              >Web Developer</span
-            >
+            <span
+              class="text-primary-light text-shadow-custom-yellow typing-animation"
+            ></span>
           </p>
           <p class="text-2xl pt-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet vel
@@ -165,7 +184,7 @@
       <div class="flex flex-wrap justify-center items-center gap-4 pt-4">
         <div class="w-[180px] flex flex-col justify-center items-center">
           <img
-            src="https://picsum.photos/200/200"
+            src="/images/html5.png"
             alt=""
             class="rounded-full w-full h-auto hover-shadow-custom-yellow-small"
           />
@@ -173,7 +192,7 @@
         </div>
         <div class="w-[180px] flex flex-col justify-center items-center">
           <img
-            src="https://picsum.photos/200/200"
+            src="/images/javascript.png"
             alt=""
             class="rounded-full w-full h-auto hover-shadow-custom-yellow-small"
           />
@@ -181,7 +200,7 @@
         </div>
         <div class="w-[180px] flex flex-col justify-center items-center">
           <img
-            src="https://picsum.photos/200/200"
+            src="images/css.png"
             alt=""
             class="rounded-full w-full h-auto hover-shadow-custom-yellow-small"
           />
@@ -189,11 +208,27 @@
         </div>
         <div class="w-[180px] flex flex-col justify-center items-center">
           <img
-            src="https://picsum.photos/200/200"
+            src="images/tailwind.png"
             alt=""
             class="rounded-full w-full h-auto hover-shadow-custom-yellow-small"
           />
           <p class="mt-2">TailwindCSS</p>
+        </div>
+        <div class="w-[180px] flex flex-col justify-center items-center">
+          <img
+            src="images/python.png"
+            alt=""
+            class="rounded-full w-full h-auto hover-shadow-custom-yellow-small"
+          />
+          <p class="mt-2">Python</p>
+        </div>
+        <div class="w-[180px] flex flex-col justify-center items-center">
+          <img
+            src="images/c.png"
+            alt=""
+            class="rounded-full w-full h-auto hover-shadow-custom-yellow-small"
+          />
+          <p class="mt-2">C#</p>
         </div>
       </div>
     </section>
@@ -284,7 +319,7 @@
     <!-- 聯絡我 -->
     <section id="contact" class="pt-8">
       <h2 class="text-4xl text-center mb-6">聯絡我</h2>
-      <form class="flex flex-col space-y-4 max-w-lg mx-auto">
+      <form id="contactForm" class="flex flex-col space-y-4 max-w-lg mx-auto">
         <input
           type="text"
           placeholder="Name"
@@ -299,11 +334,12 @@
           placeholder="Message"
           class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-light h-32 resize-none text-black"
         ></textarea>
-        <a
+        <button
           href="#"
           class="bg-primary-light text-black rounded-full w-full h-auto py-3 flex items-center justify-center text-sm font-semibold transition-transform transform hover:scale-105"
-          >Send</a
         >
+          Send
+        </button>
       </form>
     </section>
 
@@ -373,5 +409,7 @@
       </ul>
       <p class="text-sm pt-8 pb-4">© 2024 English Vegetable Cheater Pro</p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

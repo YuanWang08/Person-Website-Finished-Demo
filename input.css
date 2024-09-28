@@ -24,6 +24,7 @@
 
 * {
   scroll-behavior: smooth;
+  scroll-margin-top: 3rem;
   font-family: "Poppins", sans-serif;
 }
 
@@ -37,4 +38,74 @@
 
 ::-webkit-scrollbar-track {
   background-color: #000000; /* 使用 Tailwind 的 bg-stone-800 */
+}
+
+.typing-animation {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: bottom;
+  border-right: 2px solid #f3f81b;
+  animation: typing 18s steps(40, end) infinite,
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  0%,
+  10% {
+    width: 0;
+  }
+  20%,
+  30% {
+    width: 9ch; /* 軟體工程師 */
+  }
+  33.33%,
+  43.33% {
+    width: 0;
+  }
+  53.33%,
+  63.33% {
+    width: 9ch; /* 網頁設計師 */
+  }
+  66.66%,
+  76.66% {
+    width: 0;
+  }
+  86.66%,
+  96.66% {
+    width: 9ch; /* 科技愛好者 */
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #f3f81b;
+  }
+}
+
+.typing-animation::after {
+  content: "Web Developer";
+  animation: change-text 18s steps(1, end) infinite;
+}
+
+@keyframes change-text {
+  0%,
+  33.32% {
+    content: "軟體工程師";
+  }
+  33.33%,
+  66.65% {
+    content: "網頁設計師";
+  }
+  66.66%,
+  99.99% {
+    content: "科技愛好者";
+  }
 }
