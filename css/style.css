@@ -804,9 +804,9 @@ video {
   border-color: rgb(243 248 27 / var(--tw-border-opacity));
 }
 
-.bg-\[\#470852\] {
+.bg-\[\#9a5ba4\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(71 8 82 / var(--tw-bg-opacity));
+  background-color: rgb(154 91 164 / var(--tw-bg-opacity));
 }
 
 .bg-background-dark {
@@ -821,16 +821,6 @@ video {
 
 .bg-transparent {
   background-color: transparent;
-}
-
-.bg-\[\#bd6eca\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(189 110 202 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#9a5ba4\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(154 91 164 / var(--tw-bg-opacity));
 }
 
 .object-cover {
@@ -948,6 +938,11 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
 .text-primary-light {
   --tw-text-opacity: 1;
   color: rgb(243 248 27 / var(--tw-text-opacity));
@@ -1045,11 +1040,15 @@ video {
   text-shadow: 0 0 25px rgba(255, 255, 0, 0.7);
 }
 
+/* 全局設置 */
+
 * {
   scroll-behavior: smooth;
   scroll-margin-top: 3rem;
   font-family: "Poppins", sans-serif;
 }
+
+/* Scroll Bar 修飾 */
 
 ::-webkit-scrollbar {
   width: 15px;
@@ -1057,13 +1056,13 @@ video {
 
 ::-webkit-scrollbar-thumb {
   background-color: #f3f81b;
-  /* 使用 Tailwind 的黃色 */
 }
 
 ::-webkit-scrollbar-track {
   background-color: #000000;
-  /* 使用 Tailwind 的 bg-stone-800 */
 }
+
+/* 打字效果動畫 */
 
 .typing-animation {
   display: inline-block;
@@ -1083,8 +1082,7 @@ video {
 
   20%,
   30% {
-    width: 9ch;
-    /* 軟體工程師 */
+    width: 7.5ch;
   }
 
   33.33%,
@@ -1095,7 +1093,6 @@ video {
   53.33%,
   63.33% {
     width: 9ch;
-    /* 網頁設計師 */
   }
 
   66.66%,
@@ -1106,7 +1103,6 @@ video {
   86.66%,
   96.66% {
     width: 9ch;
-    /* 科技愛好者 */
   }
 
   100% {
@@ -1133,17 +1129,17 @@ video {
 @keyframes change-text {
   0%,
   33.32% {
-    content: "軟體工程師";
+    content: "爬樹高手";
   }
 
   33.33%,
   66.65% {
-    content: "網頁設計師";
+    content: "立法院常客";
   }
 
   66.66%,
   99.99% {
-    content: "科技愛好者";
+    content: "發大財專家";
   }
 }
 

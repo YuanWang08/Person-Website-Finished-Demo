@@ -1,3 +1,4 @@
+// 開關選單
 document.getElementById("menu-icon").addEventListener("click", function () {
   const menu = document.getElementById("mobile-menu");
   menu.classList.remove("translate-x-full");
@@ -10,7 +11,6 @@ document.getElementById("close-icon").addEventListener("click", function () {
   menu.classList.add("translate-x-full");
 });
 
-// 為每個 nav-link 添加點擊事件監聽器
 document.querySelectorAll(".nav-link").forEach((link) => {
   link.addEventListener("click", function () {
     const menu = document.getElementById("mobile-menu");
@@ -19,7 +19,7 @@ document.querySelectorAll(".nav-link").forEach((link) => {
   });
 });
 
-// Discord Webhook URL
+// Discord Webhook 串接
 // Replace with your own Discord Webhook URL
 const discord_webhook_url =
   "https://discord.com/api/webhooks/1289595424528666676/WEqCx0RMq-Pa4XCtRrr3yobsqH7XdTguqjfwXL_05arZNQTXSCMRebcUbSSRB4jj2712";

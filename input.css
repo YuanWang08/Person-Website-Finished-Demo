@@ -22,24 +22,27 @@
   text-shadow: 0 0 25px rgba(255, 255, 0, 0.7);
 }
 
+/* 全局設置 */
 * {
   scroll-behavior: smooth;
   scroll-margin-top: 3rem;
   font-family: "Poppins", sans-serif;
 }
 
+/* Scroll Bar 修飾 */
 ::-webkit-scrollbar {
   width: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #f3f81b; /* 使用 Tailwind 的黃色 */
+  background-color: #f3f81b;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #000000; /* 使用 Tailwind 的 bg-stone-800 */
+  background-color: #000000;
 }
 
+/* 打字效果動畫 */
 .typing-animation {
   display: inline-block;
   overflow: hidden;
@@ -57,7 +60,7 @@
   }
   20%,
   30% {
-    width: 9ch; /* 軟體工程師 */
+    width: 7.5ch;
   }
   33.33%,
   43.33% {
@@ -65,7 +68,7 @@
   }
   53.33%,
   63.33% {
-    width: 9ch; /* 網頁設計師 */
+    width: 9ch;
   }
   66.66%,
   76.66% {
@@ -73,7 +76,7 @@
   }
   86.66%,
   96.66% {
-    width: 9ch; /* 科技愛好者 */
+    width: 9ch;
   }
   100% {
     width: 0;
@@ -98,14 +101,14 @@
 @keyframes change-text {
   0%,
   33.32% {
-    content: "軟體工程師";
+    content: "爬樹高手";
   }
   33.33%,
   66.65% {
-    content: "網頁設計師";
+    content: "立法院常客";
   }
   66.66%,
   99.99% {
-    content: "科技愛好者";
+    content: "發大財專家";
   }
 }
