@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-TW" class="min-h-screen">
+<html lang="zh-TW" class="min-h-screen dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,37 +11,41 @@
     />
     <link href="css/style.css" rel="stylesheet" />
   </head>
-  <body class="w-full h-full bg-background-dark text-white px-4 md:px-36 pt-4">
+  <body
+    class="w-full h-full bg-background-light dark:bg-background-dark text-word-light dark:text-word-dark px-4 md:px-36 pt-4"
+  >
     <!-- Navbar 區塊 -->
     <header
-      class="fixed top-0 left-0 px-4 md:px-36 pt-4 w-full flex justify-between items-center z-50 bg-background-dark"
+      class="fixed w-full top-0 left-0 px-4 md:px-36 pt-4 flex justify-between items-center bg-background-light dark:bg-background-dark z-50"
     >
       <a
         href="#home"
         class="text-xl md:text-3xl cursor-pointer transition ease duration-300 hover:scale-110"
         >Korean Fish |
-        <span class="text-primary-light text-shadow-custom-yellow"
+        <span
+          class="text-primary-light dark:text-primary-dark text-shadow-custom"
           >Tree Climber</span
         ></a
       >
 
       <!-- 手機選單按鈕 -->
       <i
-        class="bx bx-menu md:hidden block text-3xl cursor-pointer"
+        class="bx bx-menu text-3xl cursor-pointer md:hidden block"
         id="menu-icon"
       ></i>
 
       <!-- 手機選單 -->
       <div
-        class="fixed top-0 right-0 h-full w-[250px] bg-[#9a5ba4] transform translate-x-full transition-transform duration-300 ease-in-out"
+        class="fixed h-full w-[250px] top-0 right-0 bg-[#9a5ba4] transform translate-x-full transition-transform duration-300 ease-in-out"
         id="mobile-menu"
       >
         <i
-          class="bx bx-x text-3xl cursor-pointer absolute top-4 right-4"
+          class="bx bx-x absolute top-4 right-4 text-3xl cursor-pointer"
           id="close-icon"
         ></i>
 
         <nav class="flex flex-col items-center space-y-4 pt-20">
+          <button id="darkModeBtnMobile">☀️</button>
           <a href="#home" class="nav-link">主頁</a>
           <a href="#experience" class="nav-link">經歷</a>
           <a href="#skills" class="nav-link">技能</a>
@@ -52,6 +56,7 @@
 
       <!-- 電腦選單 -->
       <nav class="space-x-4 md:block hidden">
+        <button id="darkModeBtn">☀️</button>
         <a href="#home" class="nav-link">主頁</a>
         <a href="#experience" class="nav-link">經歷</a>
         <a href="#skills" class="nav-link">技能</a>
@@ -61,19 +66,20 @@
     </header>
 
     <!-- 主頁 -->
-    <section id="home" class="flex flex-col-reverse md:flex-row pt-10">
-      <div class="w-full pt-4 md:w-[60%]">
+    <section id="home" class="flex flex-col-reverse md:flex-row pt-[84px]">
+      <div class="w-full md:w-[60%] pt-4">
         <div>
           <p class="text-6xl">
             Hi, It's
-            <span class="text-primary-light text-shadow-custom-yellow"
+            <span
+              class="text-primary-light dark:text-primary-dark text-shadow-custom"
               >Korean Fish</span
             >
           </p>
           <p class="text-4xl pt-3">
             I'm a
             <span
-              class="text-primary-light text-shadow-custom-yellow typing-animation"
+              class="text-primary-light dark:text-primary-dark text-shadow-custom typing-animation"
             ></span>
           </p>
           <p class="text-2xl pt-3">
@@ -87,23 +93,23 @@
         <div class="flex items-center space-x-4 pt-4">
           <a
             href="#"
-            class="icon-animation w-18 h-18 bg-transparent text-primary-light text-3xl border-2 border-primary-light rounded-full"
-            ><i class="bx bxl-facebook-square p-1.5"></i
+            class="w-18 h-18 icon-animation text-primary-light dark:text-primary-dark text-3xl border-2 border-primary-light dark:border-primary-dark rounded-full"
+            ><i class="bx bxl-facebook-square p-1.5 hover:text-white"></i
           ></a>
           <a
             href="#"
-            class="icon-animation w-18 h-18 bg-transparent text-primary-light text-3xl border-2 border-primary-light rounded-full"
-            ><i class="bx bxl-instagram-alt p-1.5"></i
+            class="w-18 h-18 icon-animation text-primary-light dark:text-primary-dark text-3xl border-2 border-primary-light dark:border-primary-dark rounded-full"
+            ><i class="bx bxl-instagram-alt p-1.5 hover:text-white"></i
           ></a>
           <a
             href="#"
-            class="icon-animation w-18 h-18 bg-transparent text-primary-light text-3xl border-2 border-primary-light rounded-full"
-            ><i class="bx bxl-github p-1.5"></i
+            class="w-18 h-18 icon-animation text-primary-light dark:text-primary-dark text-3xl border-2 border-primary-light dark:border-primary-dark rounded-full"
+            ><i class="bx bxl-github p-1.5 hover:text-white"></i
           ></a>
           <a
             href="#"
-            class="icon-animation w-18 h-18 bg-transparent text-primary-light text-3xl border-2 border-primary-light rounded-full"
-            ><i class="bx bxl-twitter p-1.5"></i
+            class="w-18 h-18 icon-animation text-primary-light dark:text-primary-dark text-3xl border-2 border-primary-light dark:border-primary-dark rounded-full"
+            ><i class="bx bxl-twitter p-1.5 hover:text-white"></i
           ></a>
         </div>
 
@@ -111,7 +117,7 @@
         <div class="flex items-center space-x-3 pt-4">
           <a
             href="#"
-            class="bg-primary-light text-black rounded-full w-auto h-auto p-3 flex items-center justify-center text-xs font-semibold transition-transform transform hover:scale-105"
+            class="w-auto h-auto flex items-center justify-center text-black text-xs font-semibold bg-primary-light dark:bg-primary-dark rounded-full p-3 transform transition-transform hover:scale-105"
             >Download CV</a
           >
         </div>
@@ -122,7 +128,7 @@
         <img
           src="images/avatar.png"
           alt=""
-          class="rounded-full relative w-[400px] cursor-pointer duration-400 ease-in-out hover:scale-105 transition duration-300 hover-shadow-custom-yellow-big"
+          class="relative w-[400px] cursor-pointer rounded-full transition ease-in-out duration-300 hover:scale-105 hover-shadow-primary-big"
         />
       </div>
     </section>
@@ -134,15 +140,17 @@
       <div class="pl-4 pt-4 flex flex-col">
         <!-- Item 1 -->
         <div class="relative flex space-x-4">
-          <div class="">
-            <div class="h-full w-1 bg-primary-light"></div>
+          <div>
+            <div class="h-full w-1 bg-primary-light dark:bg-primary-dark"></div>
             <div
-              class="absolute bg-primary-light w-4 h-4 top-0 left-0 rounded-full transform -translate-x-1.5 translate-y-1"
+              class="absolute w-4 h-4 top-0 left-0 rounded-full bg-primary-light dark:bg-primary-dark transform -translate-x-1.5 translate-y-1"
             ></div>
           </div>
           <div class="pb-4">
             <p class="pb-3 pl-1">2012</p>
-            <div class="border border-primary-light rounded-xl p-3">
+            <div
+              class="rounded-xl border border-primary-light dark:border-primary-dark p-3"
+            >
               <p>臺北農產運銷公司總經理</p>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
@@ -155,15 +163,17 @@
         </div>
         <!-- Item 2 -->
         <div class="relative flex space-x-4">
-          <div class="">
-            <div class="h-full w-1 bg-primary-light"></div>
+          <div>
+            <div class="h-full w-1 bg-primary-light dark:bg-primary-dark"></div>
             <div
-              class="absolute bg-primary-light w-4 h-4 top-0 left-0 rounded-full transform -translate-x-1.5 translate-y-1"
+              class="absolute w-4 h-4 top-0 left-0 rounded-full bg-primary-light dark:bg-primary-dark transform -translate-x-1.5 translate-y-1"
             ></div>
           </div>
           <div class="pb-4">
             <p class="pb-3 pl-1">2018</p>
-            <div class="border border-primary-light rounded-xl p-3">
+            <div
+              class="rounded-xl border border-primary-light dark:border-primary-dark p-3"
+            >
               <p>參選高雄市市長</p>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
@@ -176,15 +186,17 @@
         </div>
         <!-- Item 3 -->
         <div class="relative flex space-x-4">
-          <div class="">
-            <div class="h-full w-1 bg-primary-light"></div>
+          <div>
+            <div class="h-full w-1 bg-primary-light dark:bg-primary-dark"></div>
             <div
-              class="absolute bg-primary-light w-4 h-4 top-0 left-0 rounded-full transform -translate-x-1.5 translate-y-1"
+              class="absolute w-4 h-4 top-0 left-0 rounded-full bg-primary-light dark:bg-primary-dark transform -translate-x-1.5 translate-y-1"
             ></div>
           </div>
           <div class="pb-4">
             <p class="pb-3 pl-1">2020 一月</p>
-            <div class="border border-primary-light rounded-xl p-3">
+            <div
+              class="rounded-xl border border-primary-light dark:border-primary-dark p-3"
+            >
               <p>參加總統大選</p>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
@@ -197,15 +209,17 @@
         </div>
         <!-- Item 4 -->
         <div class="relative flex space-x-4">
-          <div class="">
-            <div class="h-full w-1 bg-primary-light"></div>
+          <div>
+            <div class="h-full w-1 bg-primary-light dark:bg-primary-dark"></div>
             <div
-              class="absolute bg-primary-light w-4 h-4 top-0 left-0 rounded-full transform -translate-x-1.5 translate-y-1"
+              class="absolute w-4 h-4 top-0 left-0 rounded-full bg-primary-light dark:bg-primary-dark transform -translate-x-1.5 translate-y-1"
             ></div>
           </div>
           <div class="pb-4">
             <p class="pb-3 pl-1">2020 六月</p>
-            <div class="border border-primary-light rounded-xl p-3">
+            <div
+              class="rounded-xl border border-primary-light dark:border-primary-dark p-3"
+            >
               <p>高雄市市長職務被罷免</p>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
@@ -218,15 +232,17 @@
         </div>
         <!-- Item 5 -->
         <div class="relative flex space-x-4">
-          <div class="">
-            <div class="h-full w-1 bg-primary-light"></div>
+          <div>
+            <div class="h-full w-1 bg-primary-light dark:bg-primary-dark"></div>
             <div
-              class="absolute bg-primary-light w-4 h-4 top-0 left-0 rounded-full transform -translate-x-1.5 translate-y-1"
+              class="absolute w-4 h-4 top-0 left-0 rounded-full bg-primary-light dark:bg-primary-dark transform -translate-x-1.5 translate-y-1"
             ></div>
           </div>
           <div class="pb-4">
             <p class="pb-3 pl-1">2024</p>
-            <div class="border border-primary-light rounded-xl p-3">
+            <div
+              class="rounded-xl border border-primary-light dark:border-primary-dark p-3"
+            >
               <p>立法院長</p>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
@@ -248,7 +264,7 @@
           <img
             src="images/html5-icon.png"
             alt=""
-            class="rounded-full w-full h-auto hover-shadow-custom-yellow-small"
+            class="rounded-full w-full h-auto hover-shadow-primary-small"
           />
           <p class="mt-2">HTML</p>
         </div>
@@ -256,7 +272,7 @@
           <img
             src="images/javascript.png"
             alt=""
-            class="rounded-full w-full h-auto hover-shadow-custom-yellow-small"
+            class="rounded-full w-full h-auto hover-shadow-primary-small"
           />
           <p class="mt-2">Javascript</p>
         </div>
@@ -264,7 +280,7 @@
           <img
             src="images/css-icon.png"
             alt=""
-            class="rounded-full w-full h-auto hover-shadow-custom-yellow-small"
+            class="rounded-full w-full h-auto hover-shadow-primary-small"
           />
           <p class="mt-2">CSS</p>
         </div>
@@ -272,7 +288,7 @@
           <img
             src="images/tailwind.png"
             alt=""
-            class="rounded-full w-full h-auto hover-shadow-custom-yellow-small"
+            class="rounded-full w-full h-auto hover-shadow-primary-small"
           />
           <p class="mt-2">TailwindCSS</p>
         </div>
@@ -280,7 +296,7 @@
           <img
             src="images/python.png"
             alt=""
-            class="rounded-full w-full h-auto hover-shadow-custom-yellow-small"
+            class="rounded-full w-full h-auto hover-shadow-primary-small"
           />
           <p class="mt-2">Python</p>
         </div>
@@ -288,9 +304,25 @@
           <img
             src="images/c.png"
             alt=""
-            class="rounded-full w-full h-auto hover-shadow-custom-yellow-small"
+            class="rounded-full w-full h-auto hover-shadow-primary-small"
           />
           <p class="mt-2">C#</p>
+        </div>
+        <div class="w-[180px] flex flex-col justify-center items-center">
+          <img
+            src="images/java.png"
+            alt=""
+            class="rounded-full w-full h-auto hover-shadow-primary-small"
+          />
+          <p class="mt-2">Java</p>
+        </div>
+        <div class="w-[180px] flex flex-col justify-center items-center">
+          <img
+            src="images/flutter.png"
+            alt=""
+            class="rounded-full w-full h-auto hover-shadow-primary-small"
+          />
+          <p class="mt-2">Flutter</p>
         </div>
       </div>
     </section>
@@ -303,7 +335,7 @@
       >
         <!-- Item 1 -->
         <div
-          class="w-full h-[30vh] md:w-[45%] border-2 border-primary-light flex p-4 rounded-3xl hover-shadow-custom-yellow-small"
+          class="w-full h-[30vh] md:w-[45%] border-2 border-primary-light dark:border-primary-dark flex p-4 rounded-3xl hover-shadow-primary-small"
         >
           <div class="flex flex-col justify-center items-center w-[40%]">
             <img
@@ -311,17 +343,17 @@
               alt=""
               class="rounded-full w-32 h-32 object-cover"
             />
-            <p class="mt-2 text-white">Project 1</p>
+            <p class="mt-2">Project 1</p>
           </div>
           <div class="pl-4 w-[60%] flex items-center">
-            <p class="text-white">
+            <p class="">
               用Html標籤與TailwindCSS製作的網頁，這是一個簡單的網頁，用來展示一個沒有政治立場的網頁
             </p>
           </div>
         </div>
         <!-- Item 2 -->
         <div
-          class="w-full h-[30vh] md:w-[45%] border-2 border-primary-light flex p-4 rounded-3xl hover-shadow-custom-yellow-small"
+          class="w-full h-[30vh] md:w-[45%] border-2 border-primary-light dark:border-primary-dark flex p-4 rounded-3xl hover-shadow-primary-small"
         >
           <div class="flex flex-col justify-center items-center w-[40%]">
             <img
@@ -329,10 +361,10 @@
               alt=""
               class="rounded-full w-32 h-32 object-cover"
             />
-            <p class="mt-2 text-white">這是一隻猴子</p>
+            <p class="mt-2">這是一隻猴子</p>
           </div>
           <div class="pl-4 w-[60%] flex items-center">
-            <p class="text-white">
+            <p class="">
               這是一隻猴子，就像我說的一樣，我們與他關係很好，他是我們的好朋友，我們一起玩耍，一起吃飯，我們之間有猴友誼
             </p>
           </div>
@@ -340,7 +372,7 @@
         </div>
         <!-- Item 3 -->
         <div
-          class="w-full h-[30vh] md:w-[45%] border-2 border-primary-light flex p-4 rounded-3xl hover-shadow-custom-yellow-small"
+          class="w-full h-[30vh] md:w-[45%] border-2 border-primary-light dark:border-primary-dark flex p-4 rounded-3xl hover-shadow-primary-small"
         >
           <div class="flex flex-col justify-center items-center w-[40%]">
             <img
@@ -348,17 +380,17 @@
               alt=""
               class="rounded-full w-32 h-32 object-cover"
             />
-            <p class="mt-2 text-white">用愛發電</p>
+            <p class="mt-2">用愛發電</p>
           </div>
           <div class="pl-4 w-[60%] flex items-center">
-            <p class="text-white">
+            <p class="">
               蔡OO：民進黨執政之後，絕對不會缺電。就像太陽能手電筒一樣，沒光的時候不會亮，要用電時沒電
             </p>
           </div>
         </div>
         <!-- Item 4 -->
         <div
-          class="w-full h-[30vh] md:w-[45%] border-2 border-primary-light flex p-4 rounded-3xl hover-shadow-custom-yellow-small"
+          class="w-full h-[30vh] md:w-[45%] border-2 border-primary-light dark:border-primary-dark flex p-4 rounded-3xl hover-shadow-primary-small"
         >
           <div class="flex flex-col justify-center items-center w-[40%]">
             <img
@@ -366,10 +398,10 @@
               alt=""
               class="rounded-full w-32 h-32 object-cover"
             />
-            <p class="mt-2 text-white">新竹棒球場</p>
+            <p class="mt-2">新竹棒球場</p>
           </div>
           <div class="pl-4 w-[60%] flex items-center">
-            <p class="text-white">
+            <p class="">
               用中央政府前瞻基礎建設計畫的新台幣8億元補助，蓋了一個超頂完全沒問題的棒球場
             </p>
           </div>
@@ -397,7 +429,7 @@
         ></textarea>
         <button
           href="#"
-          class="bg-primary-light text-black rounded-full w-full h-auto py-3 flex items-center justify-center text-sm font-semibold transition-transform transform hover:scale-105"
+          class="bg-primary-light dark:bg-primary-dark text-black rounded-full w-full h-auto py-3 flex items-center justify-center text-sm font-semibold transition-transform transform hover:scale-105"
         >
           Send
         </button>
@@ -409,22 +441,22 @@
       <div class="flex items-center space-x-4">
         <a
           href="#"
-          class="flex justify-center items-center w-9 h-9 bg-transparent border-2 border-primary-light text-primary-light text-xl rounded-full transition-transform duration-300 ease-in-out hover:text-white hover:scale-125 hover:-translate-y-1 hover:bg-yellow-300 hover:shadow-lg"
+          class="flex justify-center items-center w-9 h-9 bg-transparent border-2 border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark text-xl rounded-full transition-transform duration-300 ease-in-out hover:scale-125 hover:-translate-y-1 hover:shadow-lg"
           ><i class="bx bxl-facebook-square"></i
         ></a>
         <a
           href="#"
-          class="flex justify-center items-center w-9 h-9 bg-transparent border-2 border-primary-light text-primary-light text-xl rounded-full transition-transform duration-300 ease-in-out hover:text-white hover:scale-125 hover:-translate-y-1 hover:bg-yellow-300 hover:shadow-lg"
+          class="flex justify-center items-center w-9 h-9 bg-transparent border-2 border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark text-xl rounded-full transition-transform duration-300 ease-in-out hover:scale-125 hover:-translate-y-1 hover:shadow-lg"
           ><i class="bx bxl-instagram-alt"></i
         ></a>
         <a
           href="#"
-          class="flex justify-center items-center w-9 h-9 bg-transparent border-2 border-primary-light text-primary-light text-xl rounded-full transition-transform duration-300 ease-in-out hover:text-white hover:scale-125 hover:-translate-y-1 hover:bg-yellow-300 hover:shadow-lg"
+          class="flex justify-center items-center w-9 h-9 bg-transparent border-2 border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark text-xl rounded-full transition-transform duration-300 ease-in-out hover:scale-125 hover:-translate-y-1 hover:shadow-lg"
           ><i class="bx bxl-github"></i
         ></a>
         <a
           href="#"
-          class="flex justify-center items-center w-9 h-9 bg-transparent border-2 border-primary-light text-primary-light text-xl rounded-full transition-transform duration-300 ease-in-out hover:text-white hover:scale-125 hover:-translate-y-1 hover:bg-yellow-300 hover:shadow-lg"
+          class="flex justify-center items-center w-9 h-9 bg-transparent border-2 border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark text-xl rounded-full transition-transform duration-300 ease-in-out hover:scale-125 hover:-translate-y-1 hover:shadow-lg"
           ><i class="bx bxl-twitter"></i
         ></a>
       </div>
@@ -432,7 +464,7 @@
         <li>
           <a
             href="#home"
-            class="hover:text-primary-light hover:font-bold hover:underline hover:underline-offset-8 transition duration-500"
+            class="hover:text-primary-light dark:hover:text-primary-dark hover:font-bold hover:underline hover:underline-offset-8 transition duration-500"
             >主頁</a
           >
         </li>
@@ -440,7 +472,7 @@
         <li>
           <a
             href="#experience"
-            class="hover:text-primary-light hover:font-bold hover:underline hover:underline-offset-8 transition duration-500"
+            class="hover:text-primary-light dark:hover:text-primary-dark hover:font-bold hover:underline hover:underline-offset-8 transition duration-500"
             >經歷</a
           >
         </li>
@@ -448,7 +480,7 @@
         <li>
           <a
             href="#skills"
-            class="hover:text-primary-light hover:font-bold hover:underline hover:underline-offset-8 transition duration-500"
+            class="hover:text-primary-light dark:hover:text-primary-dark hover:font-bold hover:underline hover:underline-offset-8 transition duration-500"
             >技能</a
           >
         </li>
@@ -456,7 +488,7 @@
         <li>
           <a
             href="#portfolio"
-            class="hover:text-primary-light hover:font-bold hover:underline hover:underline-offset-8 transition duration-500"
+            class="hover:text-primary-light dark:hover:text-primary-dark hover:font-bold hover:underline hover:underline-offset-8 transition duration-500"
             >作品集</a
           >
         </li>
@@ -464,7 +496,7 @@
         <li>
           <a
             href="#contact"
-            class="hover:text-primary-light hover:font-bold hover:underline hover:underline-offset-8 transition duration-500"
+            class="hover:text-primary-light dark:hover:text-primary-dark hover:font-bold hover:underline hover:underline-offset-8 transition duration-500"
             >聯絡我</a
           >
         </li>
@@ -474,6 +506,8 @@
     </footer>
 
     <!-- 導入Javascript -->
-    <script src="script.js"></script>
+    <script src="darkMode.js"></script>
+    <script src="toggleMenu.js"></script>
+    <script src="discord.js"></script>
   </body>
 </html>

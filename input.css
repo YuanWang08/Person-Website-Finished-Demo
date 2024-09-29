@@ -3,23 +3,19 @@
 @tailwind utilities;
 
 .nav-link {
-  @apply hover:text-primary-light hover:font-bold hover:underline hover:underline-offset-8 transition duration-500;
+  @apply hover:text-primary-light dark:hover:text-primary-dark hover:font-bold hover:underline hover:underline-offset-8 transition duration-500;
 }
 
 .icon-animation {
-  @apply transition-transform duration-300 ease-in-out hover:text-white hover:scale-125 hover:-translate-y-1 hover:bg-primary-light hover:shadow-lg;
+  @apply transition-transform duration-300 ease-in-out hover:scale-125 hover:-translate-y-1 hover:bg-primary-light dark:hover:bg-primary-dark hover:shadow-lg;
 }
 
-.hover-shadow-custom-yellow-big {
-  @apply hover:shadow-custom-yellow-big;
+.hover-shadow-primary-big {
+  @apply hover:shadow-primary-big dark:hover:shadow-primary-big-dark;
 }
 
-.hover-shadow-custom-yellow-small {
-  @apply hover:shadow-custom-yellow-small transition ease-in-out duration-300 cursor-pointer;
-}
-
-.text-shadow-custom-yellow {
-  text-shadow: 0 0 25px rgba(255, 255, 0, 0.7);
+.hover-shadow-primary-small {
+  @apply hover:shadow-primary-small dark:hover:shadow-primary-small-dark transition ease-in-out duration-300 cursor-pointer;
 }
 
 /* 全局設置 */
@@ -35,11 +31,19 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #f3f81b;
+  background-color: #f44336; /* Copy primary-light */
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background-color: #f3f81b; /* Copy primary-dark */
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #000000;
+  background-color: #eeeeee; /* Copy background-light */
+}
+
+.dark ::-webkit-scrollbar-track {
+  background-color: #000000; /* Copy background-dark */
 }
 
 /* 打字效果動畫 */
@@ -48,7 +52,7 @@
   overflow: hidden;
   white-space: nowrap;
   vertical-align: bottom;
-  border-right: 2px solid #f3f81b;
+  border-right: 2px solid #b0bec5;
   animation: typing 18s steps(40, end) infinite,
     blink-caret 0.75s step-end infinite;
 }
@@ -89,7 +93,7 @@
     border-color: transparent;
   }
   50% {
-    border-color: #f3f81b;
+    border-color: #b0bec5;
   }
 }
 
